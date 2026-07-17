@@ -1,0 +1,121 @@
+.section {
+  position: relative;
+  background: #f4f7f0;
+  color: #152017;
+  scroll-margin-top: 80px;
+}
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 116px) clamp(20px, 5vw, 64px);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #2e5d38;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.table {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(20, 28, 20, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(20, 28, 20, 0.06);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  align-items: center;
+  font-size: clamp(12.5px, 3.3vw, 16px);
+}
+
+.row + .row {
+  border-top: 1px solid #e5ebdc;
+}
+
+.headSpacer {
+  padding: clamp(16px, 4vw, 20px) clamp(12px, 3.5vw, 26px);
+}
+
+.headFlipper {
+  padding: clamp(16px, 4vw, 20px) clamp(8px, 2.5vw, 22px);
+  text-align: center;
+  background: linear-gradient(180deg, #3c7a47, #2e5d38);
+  color: #eaf3e0;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.1;
+}
+
+.headOther {
+  padding: clamp(16px, 4vw, 20px) clamp(8px, 2.5vw, 22px);
+  text-align: center;
+  color: #76836c;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(15px, 1.5vw, 19px);
+  line-height: 1.1;
+}
+
+.label {
+  padding: clamp(14px, 3.5vw, 18px) clamp(12px, 3.5vw, 26px);
+  font-weight: 600;
+  color: #46523f;
+}
+
+.flipperCell {
+  padding: clamp(14px, 3.5vw, 18px) clamp(8px, 2.5vw, 22px);
+  text-align: center;
+  font-weight: 700;
+  color: #152017;
+  background: rgba(40, 70, 48, 0.05);
+}
+
+.otherCell {
+  padding: clamp(14px, 3.5vw, 18px) clamp(8px, 2.5vw, 22px);
+  text-align: center;
+  color: #76836c;
+}
+
+.yesBadge {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #234a2e;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.noBadge {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #d6decb;
+  color: #8a9580;
+  align-items: center;
+  justify-content: center;
+}

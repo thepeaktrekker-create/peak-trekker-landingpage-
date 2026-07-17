@@ -1,0 +1,122 @@
+.section {
+  position: relative;
+  background: #f2f6ee;
+  color: #152017;
+  scroll-margin-top: 80px;
+  overflow: hidden;
+}
+
+.topo {
+  position: absolute;
+  inset: 0;
+  background-image: url(/assets/topo.svg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  color: #2e5d38;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 118px) clamp(20px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #2e5d38;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  margin: 0 0 26px;
+  max-width: 18ch;
+}
+
+.paragraph {
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.65;
+  color: #5a6753;
+  margin: 0 0 18px;
+}
+
+.paragraphLast {
+  margin-bottom: 28px;
+}
+
+.founders {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.foundersName {
+  font-weight: 700;
+  font-size: 16px;
+  color: #152017;
+}
+
+.foundersRole {
+  font-size: 14px;
+  color: #76836c;
+}
+
+.visual {
+  position: relative;
+}
+
+.imageFrame {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 28, 20, 0.1);
+  box-shadow: 0 30px 60px rgba(20, 28, 20, 0.18);
+  transform: rotate(-1.4deg);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 40vw, 500px);
+  object-fit: cover;
+  animation: kenburns2 24s ease-in-out infinite alternate;
+}
+
+.badge {
+  position: absolute;
+  right: -8px;
+  top: 22px;
+  background: #2e5d38;
+  color: #f2f6ee;
+  border-radius: 12px;
+  padding: 11px 15px;
+  box-shadow: 0 12px 26px rgba(20, 28, 20, 0.25);
+  transform: rotate(2deg);
+}
+
+.badgeLabel {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #cfe0bd;
+  font-weight: 700;
+}
+
+.badgeValue {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+}

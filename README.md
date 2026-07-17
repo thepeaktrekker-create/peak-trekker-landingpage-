@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Peaktrekker — Flipper Grill Landing Page
 
-## Getting Started
+Production Next.js port of the Claude Design export in [`peaktrekkker/project/`](peaktrekkker/project/)
+(kept as design reference — not app code).
 
-First, run the development server:
+**One twist. Seven skewers. Perfect grilling anywhere.**
+
+## Stack
+
+- Next.js (App Router, TypeScript) + CSS Modules — 1:1 port of the design's bespoke CSS
+- Bricolage Grotesque + Hanken Grotesk via `next/font`
+- Supabase for the restock/updates email list (server action, service-role key server-side only)
+- Vitest for unit tests
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm test         # vitest
+npm run lint     # eslint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Supabase setup (once)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Run [`supabase/waitlist.sql`](supabase/waitlist.sql) in the Supabase SQL editor.
+2. Copy `.env.local.example` → `.env.local` and fill in your project URL + service role key.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Without env keys the site still renders; the email form shows a friendly
+"temporarily unavailable" message instead of saving.
 
-## Learn More
+## Deploying to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+Vercel auto-detects Next.js — no `vercel.json` needed. The only manual step is
+configuring environment variables (they are **not** committed; `.env.local` is
+gitignored).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Import the repo** into Vercel (or run `vercel` from the project root).
+2. **Add environment variables** in Project → Settings → Environment Variables,
+   for the Production (and Preview) environments:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   | Name | Value | Notes |
+   |------|-------|-------|
+   | `NEXT_PUBLIC_SUPABASE_URL` | your Supabase project URL | safe to expose (ships to the browser) |
+   | `SUPABASE_SERVICE_ROLE_KEY` | your service-role **secret** key | **server-only** — do NOT prefix with `NEXT_PUBLIC_` |
 
-## Deploy on Vercel
+   The service-role key is used only in the `joinWaitlist` server action, so it
+   stays on the server and is never sent to the client.
+3. **Deploy.** Build command (`next build`) and output are detected automatically.
+   Node version is pinned via `engines.node` in `package.json` (and `.nvmrc`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Redeploy after changing env vars — they are read at build/start time, so an
+> existing deployment won't pick up new values until it rebuilds.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Swapping the campaign link
+
+All "Get the Flipper Grill" CTAs point to `CAMPAIGN_URL` in
+[`lib/constants.ts`](lib/constants.ts). It's currently a **placeholder** (the
+Peaktrekker Kickstarter creator profile) because the campaign isn't live yet.
+Replace that one line with the real campaign URL when it launches.

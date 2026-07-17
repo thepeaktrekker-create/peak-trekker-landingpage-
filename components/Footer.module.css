@@ -1,0 +1,114 @@
+.footer {
+  background: #090c09;
+  color: #f2f6ee;
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 76px) clamp(20px, 5vw, 64px) 40px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+  align-items: start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(238, 243, 233, 0.1);
+}
+
+.brandRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  margin-bottom: 18px;
+}
+
+.brandName {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 24px;
+  color: #f2f6ee;
+}
+
+.brandTm {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #7cb069;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.slogan {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0;
+  max-width: 18ch;
+}
+
+.columnTitle {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 233, 0.45);
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 243, 233, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f6ee;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.socialLink:hover {
+  background: #3c7a47;
+  border-color: #3c7a47;
+  color: #ffffff;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(238, 243, 233, 0.7);
+  font-size: 15px;
+  transition: color 0.25s ease;
+}
+
+.link:hover {
+  color: #7cb069;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.bottomText {
+  font-size: 13.5px;
+  color: rgba(238, 243, 233, 0.4);
+}

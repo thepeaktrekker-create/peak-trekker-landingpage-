@@ -1,0 +1,107 @@
+.section {
+  position: relative;
+  background: #10160f;
+  overflow: hidden;
+}
+
+.topo {
+  position: absolute;
+  inset: 0;
+  background-image: url(/assets/topo.svg);
+  background-size: cover;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 64px);
+}
+
+.kickerWrap {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #7cb069;
+  text-transform: uppercase;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(56px, 7vw, 92px);
+  line-height: 1;
+  color: #8fbf6e;
+}
+
+.statLabel {
+  font-size: 16px;
+  color: rgba(238, 243, 233, 0.66);
+  margin-top: 8px;
+}
+
+.quoteWrap {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 22px;
+}
+
+.attribution {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e5d38, #234a2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #eaefe3;
+  font-size: 15px;
+}
+
+.name {
+  font-weight: 700;
+  color: #f2f6ee;
+  font-size: 15px;
+  text-align: left;
+}
+
+.role {
+  font-size: 13.5px;
+  color: rgba(238, 243, 233, 0.5);
+  text-align: left;
+}

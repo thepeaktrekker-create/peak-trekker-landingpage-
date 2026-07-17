@@ -1,0 +1,40 @@
+.strip {
+  background: #234a2e;
+  border-top: 1px solid rgba(238, 243, 233, 0.07);
+  border-bottom: 1px solid rgba(238, 243, 233, 0.07);
+  overflow: hidden;
+  padding: 22px 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 38px;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #eaefe3;
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-flex;
+  align-items: center;
+  color: #8fb87a;
+  font-size: 18px;
+}

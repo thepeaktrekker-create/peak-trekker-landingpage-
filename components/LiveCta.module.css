@@ -1,0 +1,203 @@
+.section {
+  position: relative;
+  background: radial-gradient(120% 90% at 50% 0, #234a2e 0%, #1f3d26 40%, #0e1a12 100%);
+  scroll-margin-top: 80px;
+  overflow: hidden;
+}
+
+.topo {
+  position: absolute;
+  inset: 0;
+  background-image: url(/assets/topo.svg);
+  background-size: cover;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 80vw;
+  max-width: 900px;
+  height: 300px;
+  background: radial-gradient(60% 100% at 50% 0, rgba(124, 176, 105, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 64px);
+  text-align: center;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #7cb069;
+  text-transform: uppercase;
+  border: 1px solid rgba(124, 176, 105, 0.4);
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7cb069;
+  box-shadow: 0 0 10px #7cb069;
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: #f4f7f0;
+}
+
+.subtitle {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: rgba(238, 243, 233, 0.74);
+  max-width: 46ch;
+  margin: 0 auto 40px;
+}
+
+.buyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #3c7a47, #2a5a35);
+  padding: 18px 34px;
+  border-radius: 999px;
+  box-shadow: 0 14px 38px rgba(20, 40, 26, 0.55);
+  margin-bottom: 46px;
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buyButton:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(20, 40, 26, 0.65);
+}
+
+.formIntro {
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 233, 0.55);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-family: var(--font-body), sans-serif;
+  color: #152017;
+  outline: none;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #3c7a47, #2a5a35);
+  border: none;
+  padding: 16px 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(40, 70, 48, 0.4);
+  font-family: var(--font-body), sans-serif;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.submit:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.hint {
+  font-size: 13.5px;
+  color: rgba(238, 243, 233, 0.5);
+  margin-top: 16px;
+}
+
+.errorText {
+  font-size: 14.5px;
+  color: #ffb4a8;
+  margin-top: 14px;
+}
+
+.successCard {
+  max-width: 540px;
+  margin: 0 auto;
+  background: rgba(11, 15, 11, 0.45);
+  border: 1px solid rgba(124, 176, 105, 0.4);
+  border-radius: 18px;
+  padding: 30px 28px;
+}
+
+.successIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #3c7a47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.successTitle {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #f4f7f0;
+  margin-bottom: 8px;
+}
+
+.successText {
+  font-size: 16px;
+  color: rgba(238, 243, 233, 0.7);
+}

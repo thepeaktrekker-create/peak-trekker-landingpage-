@@ -1,0 +1,40 @@
+.tiles {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+  margin-bottom: 46px;
+}
+
+.tile {
+  background: rgba(11, 15, 11, 0.4);
+  border: 1px solid rgba(238, 243, 233, 0.12);
+  border-radius: 16px;
+  padding: 18px clamp(14px, 2.4vw, 28px);
+  min-width: 88px;
+}
+
+.tileAccent {
+  border-color: rgba(124, 176, 105, 0.35);
+}
+
+.value {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.valueAccent {
+  color: #7cb069;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 233, 0.5);
+  margin-top: 6px;
+}
