@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const SOCIALS = [
   { label: "Facebook", href: "https://www.facebook.com/thepeaktrekker", icon: <FacebookIcon /> },
-  { label: "Instagram", href: "https://www.instagram.com/thepeaktrekker", icon: <InstagramIcon /> },
+  { label: "Instagram", href: "https://www.instagram.com/peaktrekker", icon: <InstagramIcon /> },
   { label: "TikTok", href: "https://www.tiktok.com/@thepeaktrekker", icon: <TikTokIcon /> },
 ] as const;
 
