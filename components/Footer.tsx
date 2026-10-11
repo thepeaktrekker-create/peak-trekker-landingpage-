@@ -1,17 +1,18 @@
-import { TAGLINE } from "@/lib/constants";
+import Link from "next/link";
+import { SOCIAL_URLS, TAGLINE } from "@/lib/constants";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import styles from "./Footer.module.css";
 
 const SOCIALS = [
-  { label: "Facebook", href: "https://www.facebook.com/thepeaktrekker", icon: <FacebookIcon /> },
-  { label: "Instagram", href: "https://www.instagram.com/peaktrekker", icon: <InstagramIcon /> },
-  { label: "TikTok", href: "https://www.tiktok.com/@thepeaktrekker", icon: <TikTokIcon /> },
+  { label: "Facebook", href: SOCIAL_URLS.facebook, icon: <FacebookIcon /> },
+  { label: "Instagram", href: SOCIAL_URLS.instagram, icon: <InstagramIcon /> },
+  { label: "TikTok", href: SOCIAL_URLS.tiktok, icon: <TikTokIcon /> },
 ] as const;
 
 const INFO_LINKS = [
-  { label: "Privacy", href: "#" },
-  { label: "Refunds", href: "#" },
-  { label: "Shipping", href: "#" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Refunds", href: "/refunds" },
+  { label: "Shipping", href: "/shipping" },
 ] as const;
 
 export function Footer() {
@@ -47,9 +48,9 @@ export function Footer() {
             <div className={styles.columnTitle}>Info</div>
             <div className={styles.links}>
               {INFO_LINKS.map((link) => (
-                <a key={link.label} href={link.href} className={styles.link}>
+                <Link key={link.label} href={link.href} className={styles.link}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

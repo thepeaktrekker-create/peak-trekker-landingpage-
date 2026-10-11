@@ -8,6 +8,15 @@
  */
 export const CAMPAIGN_URL = "https://www.kickstarter.com/profile/peaktrekker";
 
+export const SOCIAL_URLS = {
+  facebook: "https://www.facebook.com/thepeaktrekker",
+  instagram: "https://www.instagram.com/peaktrekker",
+  tiktok: "https://www.tiktok.com/@thepeaktrekker",
+} as const;
+
+/** "Last updated" date shown on the privacy, refunds and shipping pages. */
+export const POLICIES_UPDATED = "11 October 2026";
+
 export const PRODUCT_FACTS = {
   packWeight: "1.5 kg",
   skewerCount: 7,

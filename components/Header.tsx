@@ -7,11 +7,16 @@ const NAV_LINKS = [
   { href: "#compare", label: "Why it wins" },
 ] as const;
 
-export function Header() {
+interface HeaderProps {
+  /** Prefix for the section links: "" on the home page, "/" on every other page. */
+  anchorBase?: "" | "/";
+}
+
+export function Header({ anchorBase = "" }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <a href="#top" className={styles.brand} aria-label="Peaktrekker home">
+        <a href={`${anchorBase}#top`} className={styles.brand} aria-label="Peaktrekker home">
           <Image
             src="/assets/logo-light.png"
             alt="Peaktrekker"
@@ -23,11 +28,11 @@ export function Header() {
         </a>
         <nav className={styles.nav}>
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.navLink}>
+            <a key={link.href} href={`${anchorBase}${link.href}`} className={styles.navLink}>
               {link.label}
             </a>
           ))}
-          <a href="#waitlist" className={styles.cta}>
+          <a href={`${anchorBase}#waitlist`} className={styles.cta}>
             Get It Now
           </a>
         </nav>
