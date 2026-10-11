@@ -25,5 +25,5 @@ export const PRODUCT_FACTS = {
 
 export const TAGLINE = "One twist. Seven skewers. Perfect grilling anywhere.";
 
-/** Countdown deadline — end of the launch month. */
-export const COUNTDOWN_TARGET_ISO = "2026-07-31T23:59:59";
+/** Countdown deadline — the launch offer ends at the end of this day. */
+export const COUNTDOWN_TARGET_ISO = "2026-10-27T23:59:59";
