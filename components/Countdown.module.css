@@ -14,10 +14,6 @@
   min-width: 88px;
 }
 
-.tileAccent {
-  border-color: rgba(124, 176, 105, 0.35);
-}
-
 .value {
   font-family: var(--font-display), sans-serif;
   font-weight: 800;
@@ -25,10 +21,6 @@
   line-height: 1;
   color: #ffffff;
   font-variant-numeric: tabular-nums;
-}
-
-.valueAccent {
-  color: #7cb069;
 }
 
 .label {

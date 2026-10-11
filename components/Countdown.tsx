@@ -49,19 +49,14 @@ export function Countdown({ target }: CountdownProps) {
     { label: "Days", value: time.days },
     { label: "Hours", value: time.hours },
     { label: "Mins", value: time.mins },
-    { label: "Secs", value: time.secs, accent: true },
+    { label: "Secs", value: time.secs },
   ];
 
   return (
     <div className={styles.tiles}>
       {tiles.map((tile) => (
-        <div
-          key={tile.label}
-          className={`${styles.tile} ${tile.accent ? styles.tileAccent : ""}`}
-        >
-          <div className={`${styles.value} ${tile.accent ? styles.valueAccent : ""}`}>
-            {tile.value}
-          </div>
+        <div key={tile.label} className={styles.tile}>
+          <div className={styles.value}>{tile.value}</div>
           <div className={styles.label}>{tile.label}</div>
         </div>
       ))}

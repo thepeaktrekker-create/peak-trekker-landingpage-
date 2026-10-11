@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, type CSSProperties } from "react";
 import { PRODUCT_FACTS } from "@/lib/constants";
-import { ArrowRightIcon, CheckIcon, FeatherIcon, RotateIcon } from "./icons";
+import { ArrowRightIcon, CompactIcon, FeatherIcon, RotateIcon } from "./icons";
 import styles from "./Hero.module.css";
 
 interface EmberConfig {
@@ -43,26 +43,26 @@ interface GodrayConfig {
 const GODRAYS: readonly GodrayConfig[] = [
   {
     width: 90, rotation: "-22deg", blur: 6, duration: 9, delay: 0,
-    gradient: "linear-gradient(180deg,rgba(232,242,222,.5),rgba(232,242,222,0) 70%)",
+    gradient: "linear-gradient(180deg,rgba(238,243,233,.5),rgba(238,243,233,0) 70%)",
   },
   {
     width: 58, rotation: "-8deg", blur: 5, duration: 11, delay: 1,
-    gradient: "linear-gradient(180deg,rgba(225,238,212,.45),rgba(225,238,212,0) 70%)",
+    gradient: "linear-gradient(180deg,rgba(238,243,233,.45),rgba(238,243,233,0) 70%)",
   },
   {
     width: 120, rotation: "10deg", blur: 7, duration: 10, delay: 0.5,
-    gradient: "linear-gradient(180deg,rgba(150,186,128,.4),rgba(150,186,128,0) 68%)",
+    gradient: "linear-gradient(180deg,rgba(238,243,233,.22),rgba(238,243,233,0) 68%)",
   },
   {
     width: 70, rotation: "24deg", blur: 6, duration: 12, delay: 1.6,
-    gradient: "linear-gradient(180deg,rgba(232,242,222,.4),rgba(232,242,222,0) 66%)",
+    gradient: "linear-gradient(180deg,rgba(238,243,233,.4),rgba(238,243,233,0) 66%)",
   },
 ];
 
 const BULLETS = [
+  { icon: <CompactIcon size={15} strokeWidth={2} />, text: "Portable, foldable" },
   { icon: <RotateIcon size={15} strokeWidth={2.2} />, text: "One flip → all skewers rotate" },
-  { icon: <CheckIcon size={15} />, text: "No uneven cooking" },
-  { icon: <FeatherIcon size={15} strokeWidth={2} />, text: "Portable, foldable, ready anywhere" },
+  { icon: <FeatherIcon size={15} strokeWidth={2} />, text: "Ultra lightweight" },
 ] as const;
 
 const PARALLAX_MAX_SCROLL = 900;
@@ -147,7 +147,7 @@ export function Hero() {
           <h1 className={styles.title}>
             Grill Smarter.
             <br />
-            Every Time. <span className={styles.titleAccent}>Anywhere.</span>
+            Every Time. Anywhere.
           </h1>
           <p className={styles.subtitle}>
             Meet the Flipper Grill, the first synchronized multi-skewer grilling system that

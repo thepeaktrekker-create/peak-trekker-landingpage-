@@ -51,11 +51,11 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(110, 138, 85, 0.14);
+  background: rgba(238, 243, 233, 0.07);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7a8c66;
+  color: rgba(238, 243, 233, 0.55);
   margin-bottom: 16px;
 }
 
@@ -88,5 +88,5 @@
 }
 
 .resultAccent {
-  color: #6e8a55;
+  color: rgba(238, 243, 233, 0.45);
 }

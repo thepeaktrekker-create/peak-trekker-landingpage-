@@ -35,6 +35,6 @@
 .dot {
   display: inline-flex;
   align-items: center;
-  color: #8fb87a;
+  color: rgba(238, 243, 233, 0.5);
   font-size: 18px;
 }
