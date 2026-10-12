@@ -151,7 +151,7 @@ export function Hero() {
           </h1>
           <p className={styles.subtitle}>
             Meet the Flipper Grill, the first synchronized multi skewer grilling system that
-            flips everything at once.
+            flips all skewers in 1 twist.
           </p>
           <ul className={styles.bullets}>
             {BULLETS.map((bullet) => (
