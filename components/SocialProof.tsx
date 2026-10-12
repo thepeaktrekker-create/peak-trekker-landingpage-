@@ -70,7 +70,7 @@ export function SocialProof() {
       <div className={styles.inner}>
         <Reveal>
           <div className={styles.kickerWrap}>
-            <div className={styles.kicker}>Field-tested</div>
+            <div className={styles.kicker}>Field tested</div>
           </div>
         </Reveal>
         <div className={styles.stats}>
@@ -85,16 +85,15 @@ export function SocialProof() {
           <div className={styles.quoteWrap}>
             <QuoteIcon />
             <p className={styles.quote}>
-              &ldquo;I unfolded it beside an alpine lake, threaded seven skewers, and gave the
-              handle one twist, and every single one turned together. No juggling, no scorched
-              edges. Just the smell of charred peppers drifting over the water and my mates
-              swearing I&rsquo;d smuggled a chef up the mountain.&rdquo;
+              &ldquo;Used to carry a 20lb grate and burn my food over open coals. Now? Ultra light
+              gear, folds paper flat, 1 twist flips all 7 skewers instantly. Zero fluff, perfect
+              cook every time.&rdquo;
             </p>
             <div className={styles.attribution}>
-              <div className={styles.avatar}>JR</div>
+              <div className={styles.avatar}>SK</div>
               <div>
-                <div className={styles.name}>Jonas R.</div>
-                <div className={styles.role}>Early tester · Dolomites</div>
+                <div className={styles.name}>Sarah K.</div>
+                <div className={styles.role}>Solo Backpacker</div>
               </div>
             </div>
           </div>

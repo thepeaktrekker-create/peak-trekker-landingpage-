@@ -15,7 +15,7 @@ interface TimeParts {
   secs: string;
 }
 
-const INITIAL: TimeParts = { days: "--", hours: "--", mins: "--", secs: "--" };
+const INITIAL: TimeParts = { days: "00", hours: "00", mins: "00", secs: "00" };
 
 function pad(value: number): string {
   return String(Math.max(0, value)).padStart(2, "0");

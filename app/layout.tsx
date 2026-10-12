@@ -18,7 +18,7 @@ const body = Hanken_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://peaktrekker.com"),
   title: "Flipper Grill | Peaktrekker",
-  description: `${TAGLINE} The first synchronized multi-skewer grilling system that flips everything at once.`,
+  description: `${TAGLINE} The first synchronized multi skewer grilling system that flips everything at once.`,
   openGraph: {
     title: "Flipper Grill | Peaktrekker",
     description: TAGLINE,

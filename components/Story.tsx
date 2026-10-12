@@ -11,7 +11,7 @@ export function Story() {
           <div className={styles.kicker}>Our Story</div>
           <h2 className={styles.title}>We built this because bad gear ruins good adventures.</h2>
           <p className={styles.paragraph}>
-            We&rsquo;re two backpackers who got tired of the trade-off: either leave the grill at
+            We&rsquo;re two backpackers who got tired of the tradeoff: either leave the grill at
             home, or haul a clattering metal box up the mountain. So we started sketching on the
             back of a trail map.
           </p>

@@ -3,7 +3,7 @@ import { CheckIcon, CrossIcon } from "./icons";
 import styles from "./Comparison.module.css";
 
 const ROWS = [
-  { label: "Pack weight", flipper: "1.5 kg", other: "4–9 kg" },
+  { label: "Pack weight", flipper: "1.5 kg", other: "4 to 9 kg" },
   { label: "Packs down to", flipper: "A canvas roll", other: "A car boot" },
   { label: "Setup time", flipper: "60 seconds", other: "Tools & patience" },
   { label: "Skewers", flipper: "7 included", other: "Sold separately" },
@@ -35,7 +35,7 @@ export function Comparison() {
               </div>
             ))}
             <div className={styles.row}>
-              <div className={styles.label}>Trailhead-ready</div>
+              <div className={styles.label}>Trailhead ready</div>
               <div className={styles.flipperCell}>
                 <span className={styles.yesBadge}>
                   <CheckIcon size={16} strokeWidth={3} />

@@ -150,7 +150,7 @@ export function Hero() {
             Every Time. Anywhere.
           </h1>
           <p className={styles.subtitle}>
-            Meet the Flipper Grill, the first synchronized multi-skewer grilling system that
+            Meet the Flipper Grill, the first synchronized multi skewer grilling system that
             flips everything at once.
           </p>
           <ul className={styles.bullets}>
