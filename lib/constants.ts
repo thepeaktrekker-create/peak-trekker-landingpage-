@@ -9,9 +9,9 @@
 export const CAMPAIGN_URL = "https://www.kickstarter.com/profile/peaktrekker";
 
 export const SOCIAL_URLS = {
-  facebook: "https://www.facebook.com/thepeaktrekker",
+  facebook: "https://www.facebook.com/share/1DUAdZXZZP/",
   instagram: "https://www.instagram.com/peaktrekker",
-  tiktok: "https://www.tiktok.com/@thepeaktrekker",
+  tiktok: "https://www.tiktok.com/@peaktreker",
 } as const;
 
 /** "Last updated" date shown on the privacy, refunds and shipping pages. */
