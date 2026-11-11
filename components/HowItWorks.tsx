@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AssemblyVideo } from "./AssemblyVideo";
 import { FeatureMarqueeStrip } from "./FeatureMarquee";
 import { Reveal } from "./Reveal";
 import { FoldIcon, GrillFlameIcon, SkewersIcon } from "./icons";
@@ -52,6 +53,9 @@ export function HowItWorks() {
             <div className={styles.kicker}>How it works</div>
             <h2 className={styles.title}>From pack to plate in three moves.</h2>
           </div>
+        </Reveal>
+        <Reveal>
+          <AssemblyVideo />
         </Reveal>
         <div className={styles.cards}>
           {STEPS.map((step, i) => (
