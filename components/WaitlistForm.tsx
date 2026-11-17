@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { joinWaitlist } from "@/app/actions/waitlist";
+import { trackLead } from "@/lib/meta-pixel";
 import { ArrowRightIcon, CheckIcon } from "./icons";
 import styles from "./LiveCta.module.css";
 
@@ -22,6 +23,7 @@ export function WaitlistForm() {
       const result = await joinWaitlist(email);
       if (result.ok) {
         setStatus("success");
+        trackLead();
       } else {
         setStatus("idle");
         setError(result.error ?? "Something went wrong. Please try again.");

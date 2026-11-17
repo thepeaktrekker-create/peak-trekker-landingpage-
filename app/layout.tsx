@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
+import { MetaPixel } from "@/components/MetaPixel";
 import { TAGLINE } from "@/lib/constants";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body>
         <div className="noiseOverlay" aria-hidden="true" />
         {children}
+        <MetaPixel />
       </body>
     </html>
   );

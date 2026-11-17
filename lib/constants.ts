@@ -15,7 +15,7 @@ export const SOCIAL_URLS = {
 } as const;
 
 /** "Last updated" date shown on the privacy, refunds and shipping pages. */
-export const POLICIES_UPDATED = "11 October 2026";
+export const POLICIES_UPDATED = "17 November 2026";
 
 export const PRODUCT_FACTS = {
   packWeight: "1.5 kg",
