@@ -1,12 +1,6 @@
-/**
- * Where every CTA button points.
- *
- * TODO: The Kickstarter campaign is not live yet — this is a PLACEHOLDER
- * (the Peaktrekker creator profile). Replace with the real campaign URL
- * (e.g. https://www.kickstarter.com/projects/peaktrekker/flipper-grill)
- * the moment it launches. This is the only line that needs to change.
- */
-export const CAMPAIGN_URL = "https://www.kickstarter.com/profile/peaktrekker";
+/** Where every CTA button points: the live Kickstarter campaign. */
+export const CAMPAIGN_URL =
+  "https://www.kickstarter.com/projects/peaktrekker/flipper-grill-grill-smarter-every-time-anywhere";
 
 export const SOCIAL_URLS = {
   facebook: "https://www.facebook.com/share/1DUAdZXZZP/",
@@ -26,4 +20,4 @@ export const PRODUCT_FACTS = {
 export const TAGLINE = "One twist. Seven skewers. Perfect grilling anywhere.";
 
 /** Countdown deadline — the launch offer ends at the end of this day. */
-export const COUNTDOWN_TARGET_ISO = "2026-11-15T23:59:59";
+export const COUNTDOWN_TARGET_ISO = "2026-11-22T23:59:59";
