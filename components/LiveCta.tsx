@@ -1,7 +1,6 @@
 import { CAMPAIGN_URL, COUNTDOWN_TARGET_ISO } from "@/lib/constants";
 import { Countdown } from "./Countdown";
 import { Reveal } from "./Reveal";
-import { WaitlistForm } from "./WaitlistForm";
 import { ArrowRightIcon } from "./icons";
 import styles from "./LiveCta.module.css";
 
@@ -33,10 +32,6 @@ export function LiveCta() {
             Get the Flipper Grill
             <ArrowRightIcon size={18} stroke="#FFFFFF" />
           </a>
-        </Reveal>
-        <Reveal delay={0.16}>
-          <div className={styles.formIntro}>Or get notified about restocks &amp; new gear</div>
-          <WaitlistForm />
         </Reveal>
       </div>
     </section>
